@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #121212;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      .wallet {
+        margin: 20px 0;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 5px;
+        width: 50%;
+        box-sizing: border-box;
+      }
+      .wallet-address {
+        color: white;
+        margin-bottom: 10px;
+      }
+      .copy-btn {
+        background-color: #00f;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Wallet Addresses</h1>
+    <p>Choose a preferred payment option</p>
+    <div class="wallet">
+      <div class="wallet-address" id="btc-address1">
+        bc1qat2en7vfuvm6vachzvzs7tutch60jz7zyd300
+      </div>
+      <button class="copy-btn" onclick="copyToClipboard('btc-address1')">
+        Copy Bitcoin Address
+      </button>
+    </div>
+    <div class="wallet">
+      <div class="wallet-address" id="btc-address2">
+        bc1qat2en7vfuvm6vachzvzs7tutch60jz7zyd300
+      </div>
+      <button class="copy-btn" onclick="copyToClipboard('btc-address2')">
+        Copy Bitcoin Address
+      </button>
+    </div>
+    <div class="wallet">
+      <div class="wallet-address" id="btc-address3">
+        bc1qat2en7vfuvm6vachzvzs7tutch60jz7zyd300
+      </div>
+      <button class="copy-btn" onclick="copyToClipboard('btc-address3')">
+        Copy Bitcoin Address
+      </button>
+    </div>
+    <div class="wallet">
+      <div class="wallet-address" id="btc-address4">
+        bc1qat2en7vfuvm6vachzvzs7tutch60jz7zyd300
+      </div>
+      <button class="copy-btn" onclick="copyToClipboard('btc-address4')">
+        Copy Bitcoin Address
+      </button>
+    </div>
+    <div class="wallet">
+      <div class="wallet-address" id="btc-address5">
+        bc1qat2en7vfuvm6vachzvzs7tutch60jz7zyd300
+      </div>
+      <button class="copy-btn" onclick="copyToClipboard('btc-address5')">
+        Copy Bitcoin Address
+      </button>
+    </div>
+    <script>
+      function copyToClipboard(id) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        alert("Address copied to clipboard!");
+      }
+    </script>
+  </body>
+</html>
